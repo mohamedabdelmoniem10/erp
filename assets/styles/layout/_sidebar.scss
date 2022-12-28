@@ -1,0 +1,26 @@
+.sidebar {
+  width: auto;
+  max-width: 15rem;
+  height: 100%;
+  min-height: 100vh;
+
+  float: right;
+  background-color: $color-white;
+  border-left: 1px solid lighten($color-text, 50%);
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .logo {
+    padding: 2.5rem;
+
+    &,
+    & img {
+      width: 100%;
+
+    }
+  }
+}

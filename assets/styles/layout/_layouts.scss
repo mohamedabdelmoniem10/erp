@@ -1,0 +1,14 @@
+main {
+  padding-right: 15rem;
+  transition: all .3s ease-in-out;
+
+  .content-container {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  &.shrinked {
+    padding-right: 40rem;
+    transition: all .3s ease-in-out .1s;
+  }
+}

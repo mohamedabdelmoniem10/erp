@@ -1,0 +1,175 @@
+.w-100 {
+  width: 100%;
+}
+
+.w-100i {
+  width: 100% !important;
+}
+
+// margins and paddings
+$MPs: ("p""padding"("0": 0, "1": 1rem, "2": 2rem, "3": 3rem, "4":4rem, "5": 5rem, "6": 6rem), "m""margin"("0": 0, "1": 1rem, "2": 2rem, "3": 3rem, "4":4rem, "5": 5rem, "6": 6rem));
+
+@each $n,
+$prop,
+$v in $MPs {
+
+  @each $name,
+  $size in $v {
+    .#{$n}x-#{$name} {
+      #{$prop}: 0 $size;
+    }
+
+    .#{$n}y-#{$name} {
+      #{$prop}: $size 0;
+    }
+
+    .#{$n}b-#{$name} {
+      #{$prop}-bottom: $size;
+    }
+
+    .#{$n}t-#{$name} {
+      #{$prop}-top: $size;
+    }
+
+    .#{$n}r-#{$name} {
+      #{$prop}-right: $size;
+    }
+
+    .#{$n}l-#{$name} {
+      #{$prop}-left: $size;
+    }
+
+    .#{$n}A-#{$name} {
+      #{$prop}: $size;
+    }
+  }
+}
+
+
+// displays
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/*fonts*/
+$sizes: ("14": 1.4rem, "16": 1.6rem,
+  "18":1.8rem,
+  "20":2rem,
+  "26": 2.6rem);
+$weights: ("b": bold,
+  "bl":bolder,
+  "n":normal);
+
+
+@each $name,
+$size in $sizes {
+  .fs-#{$name} {
+    font-size: $size;
+  }
+}
+
+@each $name,
+$weight in $weights {
+  .fw-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+/*..fonts*/
+
+// colors cl
+.c-primary {
+  color: $color-primary;
+}
+
+.c-secondary {
+  color: $color-secondary;
+}
+
+.c-text {
+  color: $color-text;
+}
+
+.c-grey {
+  color: $color-grey;
+}
+
+.bg-primary {
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.bg-secondary {
+  color: #fff;
+  background-color: $color-secondary;
+}
+
+.bg-text {
+  color: #fff;
+  background-color: $color-text;
+}
+
+
+.c-info {
+  color: #1FB1C6;
+}
+
+.c-success {
+  color: #35D280;
+}
+
+.c-danger {
+  color: #FD3259;
+}
+
+
+/*
+other utilities
+*/
+
+.pointer {
+  cursor: pointer;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+
+
+//text align
+$aligns: (right, left, center);
+
+@each $align in $aligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}

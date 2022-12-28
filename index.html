@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERB Next</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/main.min.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icons -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./assets/fonts/all.min.css" />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <a href="/" class="logo">
+        <img src="./assets/media/dafater-fav.svg" alt="" />
+      </a>
+      <ul class="menu main-menu">
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-chart-line"></i>
+            <i class="fal fa-chart-line"></i>
+            <span class="label">المؤشرات</span>
+          </a>
+
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المؤشرات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item active">العملاء</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-sack-dollar"></i>
+            <i class="fal fa-sack-dollar"></i>
+            <span class="label">المبيعات</span>
+          </a>
+
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المبيعات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="menu__item sub-menu__item sub-menu__adding-item"
+              >
+                العملاء
+                <i class="fal fa-plus-circle"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+                <i class="fal fa-chevron-down"></i>
+              </a>
+
+              <!-- sub menu of sub menu -->
+              <ul class="menu sub-menu">
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 1</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 2</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 3</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد4</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                تهيئة المبيعات
+                <i class="fal fa-chevron-down"></i>
+              </a>
+              <!-- sub menu of sub menu -->
+              <ul class="menu sub-menu">
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 1</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 2</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 3</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد4</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-boxes-alt"></i>
+            <i class="fal fa-boxes-alt"></i>
+            <span class="label">المخزون</span>
+          </a>
+
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المخزون</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fal fa-shopping-cart"></i>
+            <span class="label">المشتريات</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المشتريات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <i class="fal fa-file-invoice-dollar"></i>
+            <span class="label">الحسابات</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">الحسابات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-users"></i>
+            <i class="fal fa-users"></i>
+            <span class="label">م البشرية</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">م البشرية</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-file-chart-line"></i>
+            <i class="fal fa-file-chart-line"></i>
+            <span class="label">التقارير</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">التقارير</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-university"></i>
+            <i class="fal fa-university"></i>
+            <span class="label">البنوك/صناديق</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">البنوك/صناديق</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <!-- main -->
+    <main>
+      <!-- header -->
+      <header class="header">
+        <div class="header-tabs__container">
+          <ul>
+            <li>
+              <div class="header__tab active">
+                <span class="header__tab-label">tab 1</span>
+                <a href="#" class="header__tab-close">
+                  <i class="fal fa-times"></i>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="header__tab">
+                <span class="header__tab-label">tab 2</span
+                ><a href="#" class="header__tab-close"
+                  ><i class="fal fa-times"></i
+                ></a>
+              </div>
+            </li>
+            <li>
+              <div class="header__tab">
+                <span class="header__tab-label">tab 3</span
+                ><a href="#" class="header__tab-close"
+                  ><i class="fal fa-times"></i
+                ></a>
+              </div>
+            </li>
+            <li>
+              <div class="header__tab">
+                <span class="header__tab-label">tab 4</span
+                ><a href="#" class="header__tab-close"
+                  ><i class="fal fa-times"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="header-btns__container">
+          <ul>
+            <li>
+              <a href="#" class="header__btn header__search-btn"
+                ><i class="fal fa-search"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__history-btn"
+                ><i class="fal fa-history"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__settings-btn">
+                <i class="fal fa-cog"></i>
+                <i class="fal fa-chevron-down"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__help-btn"
+                ><i class="fal fa-question-circle"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__notifications-btn"
+                ><i class="fal fa-bell"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__profile-btn">
+                <div class="profile__avatar">
+                  <img src="./assets/media/avatar.png" alt="profile avatar" />
+                </div>
+                <div class="profile__info">
+                  <span>محمد عبدالمنعم</span>
+                  <!-- NAME -->
+                  <span>EM0091</span>
+                  <!-- ID -->
+                </div>
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- search -->
+          <!-- history -->
+          <!-- settings -->
+          <!-- help -->
+          <!-- notifications -->
+          <!-- user button card -->
+        </div>
+      </header>
+      <div class="content-container">
+        <!-- list indicators -->
+        <div class="list-indicators__row">
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">مسودة</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>74</span>
+              <span></span>
+            </div>
+          </div>
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">اجمالي الفواتير</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>2.88K</span>
+              <span>3 فاتورة</span>
+            </div>
+          </div>
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">مبالغ محصلة</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>2.88K</span>
+              <span>3فاتورة</span>
+            </div>
+          </div>
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">المبلغ المعلق</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>2.88K</span>
+              <span>3 فاتورة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

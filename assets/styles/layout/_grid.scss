@@ -1,0 +1,59 @@
+.grid {
+  display: grid;
+}
+
+.grid-1x2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @include responsive(tab-land) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-1x4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem 1.5rem;
+
+  @include responsive(small-screen) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include responsive(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(tab-port) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.grid3-1 {
+  grid-template-columns: 3fr minmax(25rem, 1fr);
+
+  @include responsive(tab-port) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid4-1 {
+  grid-template-columns: 3fr minmax(30rem, 1fr);
+  column-gap: 2rem;
+
+  @include responsive(tab-port) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid2-1 {
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2.4rem 3rem;
+
+  @include responsive(tab-port) {
+    grid-template-columns: 1fr;
+    &.form-row{
+      
+    }
+  }
+}
