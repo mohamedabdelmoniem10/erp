@@ -3,6 +3,8 @@ let subParentItems = document.querySelectorAll(".sub-menu__parent-item");
 let subsOfSub = document.querySelectorAll(".sub-menu__item.has-sub");
 let mainElement = document.querySelector("main");
 
+let headerBtns = document.querySelectorAll(".header__btn");
+
 // for tabs menu
 let tabsContainer = document.querySelector(".header-tabs__container ul");
 let tabs = document.querySelectorAll(".header__tab");
@@ -70,5 +72,17 @@ subsOfSub.forEach((item) => {
     e.preventDefault();
     e.stopPropagation();
     item.classList.toggle("active");
+  });
+});
+
+headerBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (btn.classList.contains("active")) {
+      headerBtns.forEach((b) => b.classList.remove("active"));
+    } else {
+      headerBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    }
   });
 });
