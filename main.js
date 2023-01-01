@@ -3,6 +3,44 @@ let subParentItems = document.querySelectorAll(".sub-menu__parent-item");
 let subsOfSub = document.querySelectorAll(".sub-menu__item.has-sub");
 let mainElement = document.querySelector("main");
 
+// for tabs menu
+let tabsContainer = document.querySelector(".header-tabs__container ul");
+let tabs = document.querySelectorAll(".header__tab");
+let tabsNavRight = document.querySelector(".header-tabs__navigation-btn.right");
+let tabsNavLeft = document.querySelector(".header-tabs__navigation-btn.left");
+let tabsNav = document.querySelector(".header-tabs__navigation-btn");
+let tabsScrollValue = 0;
+// for tabs menu
+tabsNavLeft.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    Math.abs(tabsContainer.scrollLeft) >
+    tabsContainer.scrollWidth -
+      document.querySelector(".header-tabs__container").clientWidth
+  ) {
+    tabsScrollValue = tabsScrollValue;
+  } else {
+    tabsScrollValue -= tabs[0].clientWidth;
+  }
+  console.log("this is clicked", tabsScrollValue);
+  tabsContainer.scroll({
+    top: 0,
+    left: tabsScrollValue,
+    behavior: "smooth",
+  });
+});
+
+tabsNavRight.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (tabsContainer.scrollLeft < 0) tabsScrollValue += tabs[0].clientWidth;
+  tabsContainer.scroll({
+    top: 0,
+    left: tabsScrollValue,
+    behavior: "smooth",
+  });
+});
+// ./end tabs menu
+
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();

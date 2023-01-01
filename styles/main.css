@@ -140,7 +140,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   top: 0;
   left: 0;
   z-index: -2;
-  transform: translateX(200%);
+  transform: translateX(25rem);
   transition: all 0.3s ease-in-out;
 }
 
@@ -459,6 +459,42 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .header__profile-dropdown a i {
   margin-left: 1rem;
 }
+.header-tabs__container {
+  width: 50%;
+  max-width: 68rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header-tabs__container > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+.header-tabs__container ul {
+  margin: 0;
+  overflow: hidden;
+  overflow-x: auto;
+  box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+}
+.header-tabs__container ul::-webkit-scrollbar {
+  height: 0;
+}
+.header-tabs__navigation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 5rem;
+  background-color: rgba(33, 178, 200, 0.1);
+  color: #21B2C8;
+  font-size: 2rem;
+}
 .header__tab {
   display: flex;
   align-items: center;
@@ -470,13 +506,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding-bottom: 1.8rem;
   padding-left: 1rem;
   opacity: 0.7;
+  box-shadow: -6px -1px 5px -2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 .header__tab-close {
   font-size: 2rem;
 }
 .header__tab.active {
   border-bottom: 2px solid #21B2C8;
+  box-shadow: -2px 3px 8px 5px rgba(0, 0, 0, 0.1);
   opacity: 1;
+  z-index: 99;
 }
 .header__tab.active-label {
   font-weight: 700;
