@@ -7,9 +7,17 @@ main {
   padding-right: 0;
   padding-left: 10rem;
 
+  @include responsive(tab-port) {
+    padding-left: 0;
+  }
+
+  .show-menu {
+    padding-left: 10rem;
+  }
+
   &.shrinked {
     padding-right: 0;
-    padding-left: 22rem;
+    padding-left: 32rem;
   }
 }
 

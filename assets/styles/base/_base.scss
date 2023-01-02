@@ -27,12 +27,12 @@ html {
 
   @include responsive(tab-land) {
     // width < 1200?
-    font-size: 47%; //1 rem = 9px, 9/16 = 50%
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
   }
 
   @include responsive(tab-port) {
     // width < 900?
-    font-size: 45%; //1 rem = 8px, 8/16 = 50%
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
 
   // please un comment this after enhance your responsive 

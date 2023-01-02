@@ -7,6 +7,11 @@ $header-height: 6rem;
   display: flex;
   justify-content: space-between;
 
+  @include responsive(tab-port) {
+    flex-wrap: wrap;
+    height: 12rem;
+  }
+
   &__btn {
     height: 100%;
     display: flex;
@@ -44,6 +49,8 @@ $header-height: 6rem;
 
   &-btns__container,
   &-tabs__container {
+
+
     >ul {
 
       display: flex;
@@ -53,6 +60,14 @@ $header-height: 6rem;
       li {
         display: inline-block;
         position: relative;
+      }
+    }
+
+    @include responsive(tab-port) {
+      width: 100%;
+
+      >ul {
+        margin: 0 auto;
       }
     }
   }
@@ -73,6 +88,7 @@ $header-height: 6rem;
 
       &__avatar {
         width: $header-height * .6;
+        min-width: $header-height * .6;
         height: $header-height * .6;
         border: 2px solid $color-primary;
         border-radius: 50%;
@@ -210,7 +226,12 @@ $header-height: 6rem;
       max-width: 55rem;
       @include flexcenter;
       align-items: flex-end;
+
       // margin-bottom: 0;
+      @include responsive(tab-port) {
+        width: 100%;
+        max-width: 100%;
+      }
 
       &>div {
         width: 100%;
@@ -262,6 +283,10 @@ $header-height: 6rem;
     box-shadow: -6px -1px 5px -2px rgba(0, 0, 0, .1);
     position: relative;
     z-index: 2;
+
+    // @include responsive(tab-port) {
+    //   width: 10rem;
+    // }
 
     &-label {}
 

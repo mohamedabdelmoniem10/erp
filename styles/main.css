@@ -1067,6 +1067,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 56.25em) {
+  .header {
+    flex-wrap: wrap;
+    height: 12rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .header {
+    flex-wrap: wrap;
+    height: 12rem;
+  }
+}
 .header__btn {
   height: 100%;
   display: flex;
@@ -1102,6 +1114,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: inline-block;
   position: relative;
 }
+@media only screen and (max-width: 56.25em) {
+  .header-btns__container, .header-tabs__container {
+    width: 100%;
+  }
+  .header-btns__container > ul, .header-tabs__container > ul {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .header-btns__container, .header-tabs__container {
+    width: 100%;
+  }
+  .header-btns__container > ul, .header-tabs__container > ul {
+    margin: 0 auto;
+  }
+}
 .header__profile-btn {
   flex-direction: row;
   padding-top: 0;
@@ -1111,6 +1139,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 .header__profile-btn .profile__avatar {
   width: 3.6rem;
+  min-width: 3.6rem;
   height: 3.6rem;
   border: 2px solid #21B2C8;
   border-radius: 50%;
@@ -1229,6 +1258,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-items: center;
   justify-content: center;
   align-items: flex-end;
+}
+@media only screen and (max-width: 56.25em) {
+  .header-tabs__container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .header-tabs__container {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 .header-tabs__container > div {
   width: 100%;
@@ -1446,6 +1487,23 @@ ORDER: Base + typography > general layout + grid > page layout > components
   justify-content: flex-start;
   flex-direction: column;
 }
+@media only screen and (max-width: 56.25em) {
+  .sidebar {
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-100%);
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .sidebar {
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-100%);
+  }
+}
+.sidebar.show-menu {
+  transform: translateX(0);
+}
 .sidebar .logo {
   padding: 2rem;
 }
@@ -1457,9 +1515,22 @@ main {
   padding-right: 10rem;
   transition: all 0.3s ease-in-out;
 }
+@media only screen and (max-width: 56.25em) {
+  main {
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  main {
+    padding-right: 0;
+  }
+}
 main .content-container {
   width: 100%;
   padding: 1.5rem;
+}
+main .show-menu {
+  padding-right: 10rem;
 }
 main.shrinked {
   padding-right: 32rem;
@@ -1494,22 +1565,22 @@ html {
 }
 @media only screen and (max-width: 75em) {
   html {
-    font-size: 47%;
+    font-size: 56.25%;
   }
 }
 @media only screen and (max-width: tab-land) {
   html {
-    font-size: 47%;
+    font-size: 56.25%;
   }
 }
 @media only screen and (max-width: 56.25em) {
   html {
-    font-size: 45%;
+    font-size: 50%;
   }
 }
 @media only screen and (max-width: tab-port) {
   html {
-    font-size: 45%;
+    font-size: 50%;
   }
 }
 
@@ -2119,66 +2190,4 @@ other utilities
 
 .text-center {
   text-align: center;
-}
-
-body {
-  direction: ltr;
-  text-align: left;
-}
-
-main {
-  padding-right: 0;
-  padding-left: 10rem;
-}
-main.shrinked {
-  padding-right: 0;
-  padding-left: 22rem;
-}
-
-.sidebar {
-  float: left;
-}
-
-.main-menu > li > .sub-menu {
-  transform: translateX(-22rem);
-  left: auto;
-  right: 0;
-}
-
-.main-menu__item.active + .sub-menu {
-  transform: translateX(22rem);
-}
-
-.sub-menu__item.active::after,
-.sub-menu__item:hover::after {
-  left: auto;
-  right: 0;
-}
-
-.header-tabs__container > div {
-  flex-direction: row-reverse;
-}
-
-.list-indicators__item-indicator {
-  margin-right: 0;
-  margin-left: 2rem;
-}
-
-.dropdown-content > ul > li a i {
-  margin-right: 10px;
-  margin-left: 0;
-}
-
-.dropdown-content {
-  left: auto;
-  right: 0.4rem;
-}
-
-.notification-container::after {
-  left: auto;
-  right: 8px;
-}
-
-.dropdown-content > ul > li a {
-  text-align: left;
 }/*# sourceMappingURL=main.css.map */

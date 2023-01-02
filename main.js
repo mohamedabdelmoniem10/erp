@@ -97,3 +97,10 @@ $(document).on(".main-menu__item", "click", function () {
     mainElement.classList.add("shrinked");
   }
 });
+
+let mobileMenuBtn = document.querySelector(".header__btn.header__menu-btn");
+let sidebar = document.querySelector(".sidebar");
+mobileMenuBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  sidebar.classList.toggle("show-menu");
+});
