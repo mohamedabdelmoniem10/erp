@@ -20,28 +20,28 @@ ORDER: Base + typography > general layout + grid > page layout > components
   color: inherit;
   font-style: normal;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .list-indicators__row {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 1.5rem;
 }
 .list-indicators__item {
   display: flex;
   align-items: center;
-  padding: 1.8rem 3rem;
+  padding: 1.5rem 2.5rem;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.08);
 }
 .list-indicators__item-icon {
-  width: 5rem;
-  min-width: 5rem;
-  height: 5rem;
-  font-size: 2.2rem;
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,9 +50,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   color: #21B2C8;
 }
 .list-indicators__item-label {
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   font-weight: 400;
-  margin: 0 2rem;
+  margin: 0 1.5rem;
   min-width: 45%;
 }
 .list-indicators__item-divider {
@@ -63,12 +63,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .list-indicators__item-indicator {
   display: flex;
   flex-direction: column;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   max-width: 24%;
+}
+.list-indicators__item-indicator span {
+  font-size: 1.5rem;
 }
 .list-indicators__item-indicator span:first-child {
   color: #21B2C8;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   white-space: break-spaces;
 }
@@ -81,7 +84,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .main-menu {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .main-menu::after {
   content: "";
@@ -98,13 +101,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-size: 2rem;
-  padding: 2rem 0.1rem;
-  margin: 2rem 0;
+  font-size: 1.4rem;
+  padding: 1.5rem 0.5rem;
+  margin: 1.5rem 0;
   border-radius: 5px;
+  text-decoration: none;
 }
 .main-menu__item i {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .main-menu__item .label {
   margin-top: 0.5rem;
@@ -116,11 +120,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: none;
 }
 .main-menu__item.active + .sub-menu {
-  transform: translateX(-25rem);
+  transform: translateX(-22rem);
 }
 .main-menu__item.active, .main-menu__item:hover {
   background-color: #21B2C8;
   color: #fff;
+  text-decoration: none;
 }
 .main-menu__item.active .fas, .main-menu__item:hover .fas {
   display: block;
@@ -129,7 +134,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: none;
 }
 .main-menu > li > .sub-menu {
-  width: 25rem;
+  width: 22rem;
   height: auto;
   min-height: 100vh;
   overflow-y: auto;
@@ -140,7 +145,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   top: 0;
   left: 0;
   z-index: -2;
-  transform: translateX(25rem);
+  transform: translateX(22rem);
   transition: all 0.3s ease-in-out;
 }
 
@@ -149,12 +154,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1.5rem 2.5rem;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  margin: 0.3rem 0.1rem;
+  text-decoration: none;
 }
 .sub-menu__item.active, .sub-menu__item:hover {
   color: #21B2C8;
   background-color: rgba(33, 178, 200, 0.1);
   position: relative;
+  text-decoration: none;
 }
 .sub-menu__item.active::after, .sub-menu__item:hover::after {
   content: "";
@@ -169,9 +178,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2rem;
   margin-bottom: 1rem;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+}
+.sub-menu__parent-item, .sub-menu__parent-item:hover {
+  text-decoration: none;
 }
 .sub-menu__parent-item .label {
   font-weight: 700;
@@ -180,7 +192,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .sub-menu__adding-item {
   width: 90%;
   border-radius: 40px;
-  background-color: rgba(109, 109, 109, 0.1);
 }
 .sub-menu__adding-item i {
   color: #21B2C8;
@@ -232,7 +243,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .mo-notifications {
-  font-family: "Tajawal", sans-serif;
   padding: 1.3rem;
 }
 .mo-notifications-header {
@@ -734,7 +744,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .helper-tools-container .helper-tools-content .suggestions > h4.title {
   color: #000;
   font-weight: 700;
-  text-align: left;
+  text-align: right;
   font-size: 20px;
 }
 .helper-tools-container .helper-tools-content .suggestions section.item {
@@ -769,7 +779,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-size: 14px;
   color: #888888;
   white-space: normal;
-  text-align: left;
+  text-align: right;
 }
 .helper-tools-container .helper-tools-content .suggestions section.item ul.d-content li a:hover {
   text-decoration: none;
@@ -937,7 +947,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-size: 14px;
   color: #888888;
   white-space: normal;
-  text-align: left;
+  text-align: right;
 }
 .helper-tools-container .helper-tools-content .procedures .panel.panel-default .panel-body ul.d-content li a:hover,
 .helper-tools-container .helper-tools-content .guide-panel-parent .panel.panel-default .panel-body ul.d-content li a:hover {
@@ -1051,7 +1061,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .header {
-  height: 9rem;
+  height: 6rem;
   background-color: #fff;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   display: flex;
@@ -1063,11 +1073,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  font-size: 2.7rem;
+  font-size: 1.8rem;
   color: #525c6a;
   cursor: pointer;
-  padding: 0 2.7rem;
-  padding-top: 3rem;
+  padding: 0 1.8rem;
+  padding-top: 2rem;
 }
 .header__btn.active i {
   font-weight: 700;
@@ -1077,18 +1087,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   opacity: 1;
 }
 .header__settings-btn {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   justify-content: space-between;
 }
 .header__settings-btn i:last-child {
-  font-size: 1.71rem;
+  font-size: 1.14rem;
 }
-.header-btns__container ul, .header-tabs__container ul {
+.header-btns__container > ul, .header-tabs__container > ul {
   display: flex;
   margin-left: 4rem;
   height: 100%;
 }
-.header-btns__container ul li, .header-tabs__container ul li {
+.header-btns__container > ul li, .header-tabs__container > ul li {
   display: inline-block;
   position: relative;
 }
@@ -1096,9 +1106,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-direction: row;
   padding-top: 0;
 }
+.header__profile-btn.active i {
+  transform: rotate(180deg);
+}
 .header__profile-btn .profile__avatar {
-  width: 5.4rem;
-  height: 5.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
   border: 2px solid #21B2C8;
   border-radius: 50%;
   display: flex;
@@ -1139,11 +1152,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-direction: column;
 }
 .header__profile-btn .profile__info span {
-  margin: 0 0.9rem 0 1.8rem;
-  font-size: 1.8rem;
+  margin: 0 0.6rem 0 1.2rem;
+  font-size: 1.2rem;
 }
 .header__profile-btn i {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   transition: 0.3s ease;
 }
 .header__profile {
@@ -1211,7 +1224,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 .header-tabs__container {
   width: 50%;
-  max-width: 68rem;
+  max-width: 55rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1222,7 +1235,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  align-items: flex-end;
+  height: 100%;
 }
 .header-tabs__container ul {
   margin: 0;
@@ -1243,17 +1257,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 5rem;
   background-color: rgba(33, 178, 200, 0.1);
   color: #21B2C8;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .header__tab {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 20rem;
-  font-size: 2rem;
-  padding: 2rem;
-  padding-bottom: 1.8rem;
+  width: 15rem;
+  font-size: 1.4rem;
+  padding: 0.9rem 1.5rem;
   padding-left: 1rem;
   opacity: 0.7;
   box-shadow: -6px -1px 5px -2px rgba(0, 0, 0, 0.1);
@@ -1276,7 +1289,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 1rem;
+  left: 0.4rem;
   top: 100%;
   background-color: #f9f9f9;
   min-width: 150px;
@@ -1285,6 +1298,53 @@ ORDER: Base + typography > general layout + grid > page layout > components
   z-index: 1;
   opacity: 0;
   transition: all ease-in-out 0.3s;
+}
+.dropdown-content > ul > li {
+  position: relative;
+}
+.dropdown-content > ul > li.brdr-bottom a {
+  border-bottom: 1px solid rgba(153, 153, 153, 0.27);
+}
+.dropdown-content > ul > li a {
+  text-align: right;
+  cursor: pointer;
+  display: flex;
+  min-width: 200px;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  color: #575756;
+  font-size: 14px;
+  transition: all ease-in-out 0.3s;
+}
+.dropdown-content > ul > li a:hover {
+  color: #C6C6C6;
+}
+.dropdown-content > ul > li a i {
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #999;
+}
+.dropdown-content > ul > li ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  top: 0;
+  left: 100%;
+  max-width: 120px;
+  display: none;
+  background-color: #f9f9f9;
+}
+.dropdown-content > ul > li ul li a {
+  display: flex;
+  max-width: 120px;
+  min-width: auto;
+  align-items: center;
+  border-bottom: 0;
+}
+.dropdown-content > ul > li:hover ul {
+  display: block;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1375,7 +1435,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 .sidebar {
   width: auto;
-  max-width: 15rem;
+  max-width: 10rem;
   height: 100%;
   min-height: 100vh;
   float: right;
@@ -1384,26 +1444,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .sidebar .logo {
-  padding: 2.5rem;
+  padding: 2rem;
 }
 .sidebar .logo, .sidebar .logo img {
   width: 100%;
 }
 
 main {
-  padding-right: 15rem;
+  padding-right: 10rem;
   transition: all 0.3s ease-in-out;
 }
 main .content-container {
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 main.shrinked {
-  padding-right: 40rem;
+  padding-right: 32rem;
   transition: all 0.3s ease-in-out 0.1s;
 }
 
@@ -1420,27 +1480,17 @@ html {
 }
 @media only screen and (min-width: 112.5em) {
   html {
-    font-size: 55%;
+    font-size: 62.5%;
   }
 }
 @media only screen and (max-width: 93.75em) {
   html {
-    font-size: 49%;
+    font-size: 62.5%;
   }
 }
 @media only screen and (max-width: desktop) {
   html {
-    font-size: 49%;
-  }
-}
-@media only screen and (max-width: 84em) {
-  html {
-    font-size: 48%;
-  }
-}
-@media only screen and (max-width: small-screen) {
-  html {
-    font-size: 48%;
+    font-size: 62.5%;
   }
 }
 @media only screen and (max-width: 75em) {
@@ -1467,6 +1517,7 @@ html {
 body {
   box-sizing: border-box;
   direction: rtl;
+  text-align: right;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -1490,6 +1541,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: #d6d4d4;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
 }
 
 ul {
@@ -1939,7 +1995,8 @@ a:focus {
   display: flex;
 }
 
-.flex-col {
+.flex-col,
+.d-flex-columns {
   display: flex;
   flex-direction: column;
 }

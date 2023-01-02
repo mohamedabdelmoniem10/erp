@@ -11,17 +11,19 @@ html {
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
   @include responsive(big-desktop) {
-    font-size: 55%;
+    // font-size: 100%;
+    font-size: 62.5%;
   }
 
   @include responsive(desktop) {
-    font-size: 49%;
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    // font-size: 49%;
   }
 
-  @include responsive(small-screen) {
-    // width < 1350?
-    font-size: 48%; //1 rem = 9px, 9/16 = 50%
-  }
+  // @include responsive(small-screen) {
+  //   // width < 1350?
+  //   font-size: 48%; //1 rem = 9px, 9/16 = 50%
+  // }
 
   @include responsive(tab-land) {
     // width < 1200?
@@ -43,6 +45,7 @@ html {
 body {
   box-sizing: border-box;
   direction: rtl;
+  text-align: right;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -68,4 +71,9 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: #d6d4d4;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
 }

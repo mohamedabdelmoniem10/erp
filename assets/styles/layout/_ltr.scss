@@ -5,11 +5,11 @@ body {
 
 main {
   padding-right: 0;
-  padding-left: 15rem;
+  padding-left: 10rem;
 
   &.shrinked {
     padding-right: 0;
-    padding-left: 40rem;
+    padding-left: 22rem;
   }
 }
 
@@ -27,6 +27,12 @@ main {
   transform: translateX($submenu-width);
 }
 
+.sub-menu__item.active::after,
+.sub-menu__item:hover::after {
+  left: auto;
+  right: 0;
+}
+
 .header-tabs__container>div {
   flex-direction: row-reverse;
 }
@@ -34,4 +40,23 @@ main {
 .list-indicators__item-indicator {
   margin-right: 0;
   margin-left: 2rem;
+}
+
+.dropdown-content>ul>li a i {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.dropdown-content {
+  left: auto;
+  right: .4rem;
+}
+
+.notification-container::after {
+  left: auto;
+  right: 8px;
+}
+
+.dropdown-content>ul>li a {
+  text-align: left;
 }

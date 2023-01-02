@@ -1,4 +1,4 @@
-$header-height: 9rem;
+$header-height: 6rem;
 
 .header {
   height: $header-height;
@@ -19,7 +19,7 @@ $header-height: 9rem;
     color: #525c6a;
     cursor: pointer;
     padding: 0 $header-height * .3;
-    padding-top: calc($header-height/2) - 1.5;
+    padding-top: calc($header-height/2) - 1;
 
     &.active {
       i {
@@ -44,7 +44,7 @@ $header-height: 9rem;
 
   &-btns__container,
   &-tabs__container {
-    ul {
+    >ul {
 
       display: flex;
       margin-left: 4rem;
@@ -60,6 +60,14 @@ $header-height: 9rem;
   &__profile-btn {
     flex-direction: row;
     padding-top: 0;
+
+    &.active {
+
+      i {
+        transform: rotate(180deg);
+      }
+
+    }
 
     .profile {
 
@@ -199,7 +207,7 @@ $header-height: 9rem;
   &-tabs {
     &__container {
       width: 50%;
-      max-width: 68rem;
+      max-width: 55rem;
       @include flexcenter;
       align-items: flex-end;
       // margin-bottom: 0;
@@ -207,7 +215,9 @@ $header-height: 9rem;
       &>div {
         width: 100%;
         @include flexcenter;
-        height: 70%;
+        align-items: flex-end;
+
+        height: 100%;
       }
 
       ul {
@@ -234,7 +244,7 @@ $header-height: 9rem;
       width: 5rem;
       background-color: rgba($color-primary, .1);
       color: $color-primary;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -243,10 +253,10 @@ $header-height: 9rem;
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 20rem;
-    font-size: 2rem;
-    padding: 2rem;
-    padding-bottom: 1.8rem;
+    width: 15rem;
+    font-size: 1.4rem;
+    padding: .9rem 1.5rem;
+    // padding-bottom: 1.8rem;
     padding-left: 1rem;
     opacity: .7;
     // border: 1px solid rgba($color-text, .08);
@@ -278,7 +288,7 @@ $header-height: 9rem;
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 1rem;
+  left: .4rem;
   top: 100%;
   background-color: #f9f9f9;
   min-width: 150px;
@@ -289,6 +299,61 @@ $header-height: 9rem;
   opacity: 0;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+
+  &>ul>li {
+    position: relative;
+
+    &.brdr-bottom a {
+      border-bottom: 1px solid rgba(153, 153, 153, 0.27);
+    }
+
+    & a {
+      text-align: right;
+      cursor: pointer;
+      display: flex;
+      min-width: 200px;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 10px 5px 10px;
+      color: #575756;
+      font-size: 14px;
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        color: #C6C6C6;
+      }
+
+      i {
+        margin-left: 10px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #999;
+      }
+    }
+
+    & ul {
+      position: absolute;
+      list-style: none;
+      padding: 0;
+      top: 0;
+      left: 100%;
+      max-width: 120px;
+      display: none;
+      background-color: #f9f9f9;
+
+      & li a {
+        display: flex;
+        max-width: 120px;
+        min-width: auto;
+        align-items: center;
+        border-bottom: 0;
+      }
+    }
+
+    &:hover ul {
+      display: block;
+    }
+  }
 }
 
 @include responsive(tab-port) {

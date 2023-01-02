@@ -1,6 +1,6 @@
 .sidebar {
   width: auto;
-  max-width: 15rem;
+  max-width: 10rem;
   height: 100%;
   min-height: 100vh;
 
@@ -11,11 +11,11 @@
   z-index: 2;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 
   .logo {
-    padding: 2.5rem;
+    padding: 2rem;
 
     &,
     & img {

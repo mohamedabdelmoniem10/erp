@@ -1,4 +1,4 @@
-$submenu-width: 25rem;
+$submenu-width: 22rem;
 
 .menu {
   list-style: none;
@@ -14,7 +14,7 @@ $submenu-width: 25rem;
 }
 
 .main-menu {
-  padding: 1.5rem;
+  padding: 1rem;
 
   &::after {
     content: "";
@@ -34,13 +34,14 @@ $submenu-width: 25rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 2rem;
-    padding: 2rem .1rem;
-    margin: 2rem 0;
+    font-size: 1.4rem;
+    padding: 1.5rem .5rem;
+    margin: 1.5rem 0;
     border-radius: 5px;
+    text-decoration: none;
 
     i {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     .label {
@@ -63,6 +64,7 @@ $submenu-width: 25rem;
     &:hover {
       background-color: $color-primary;
       color: $color-white;
+      text-decoration: none;
 
       .fas {
         display: block;
@@ -102,7 +104,10 @@ $submenu-width: 25rem;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 1.5rem 2.5rem;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    margin: .3rem .1rem;
+    text-decoration: none;
 
 
     &.active,
@@ -110,6 +115,7 @@ $submenu-width: 25rem;
       color: $color-primary;
       background-color: rgba($color-primary, .1);
       position: relative;
+      text-decoration: none;
 
       &::after {
         content: "";
@@ -127,9 +133,14 @@ $submenu-width: 25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 2.5rem;
+    padding: 1.5rem 2rem;
     margin-bottom: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+
+    &,
+    &:hover {
+      text-decoration: none;
+    }
 
     .label {
       font-weight: 700;
@@ -140,7 +151,7 @@ $submenu-width: 25rem;
   &__adding-item {
     width: 90%;
     border-radius: 40px;
-    background-color: rgba(#6D6D6D, .1);
+    // background-color: rgba(#6D6D6D, .1);
 
     i {
       color: $color-primary;

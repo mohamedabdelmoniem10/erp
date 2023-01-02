@@ -86,3 +86,14 @@ headerBtns.forEach((btn) => {
     }
   });
 });
+
+$(document).on(".main-menu__item", "click", function () {
+  if (item.classList.contains("active")) {
+    menuItems.forEach((i) => i.classList.remove("active"));
+    mainElement.classList.remove("shrinked");
+  } else {
+    menuItems.forEach((i) => i.classList.remove("active"));
+    item.classList.add("active");
+    mainElement.classList.add("shrinked");
+  }
+});

@@ -51,7 +51,8 @@ $v in $MPs {
   display: flex;
 }
 
-.flex-col {
+.flex-col,
+.d-flex-columns {
   display: flex;
   flex-direction: column;
 }
