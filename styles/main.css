@@ -1242,7 +1242,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   margin: 0;
   overflow: hidden;
   overflow-x: auto;
-  box-shadow: inset 2px 1px 4px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: flex-end;
 }
@@ -2120,4 +2119,66 @@ other utilities
 
 .text-center {
   text-align: center;
+}
+
+body {
+  direction: ltr;
+  text-align: left;
+}
+
+main {
+  padding-right: 0;
+  padding-left: 10rem;
+}
+main.shrinked {
+  padding-right: 0;
+  padding-left: 22rem;
+}
+
+.sidebar {
+  float: left;
+}
+
+.main-menu > li > .sub-menu {
+  transform: translateX(-22rem);
+  left: auto;
+  right: 0;
+}
+
+.main-menu__item.active + .sub-menu {
+  transform: translateX(22rem);
+}
+
+.sub-menu__item.active::after,
+.sub-menu__item:hover::after {
+  left: auto;
+  right: 0;
+}
+
+.header-tabs__container > div {
+  flex-direction: row-reverse;
+}
+
+.list-indicators__item-indicator {
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+.dropdown-content > ul > li a i {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.dropdown-content {
+  left: auto;
+  right: 0.4rem;
+}
+
+.notification-container::after {
+  left: auto;
+  right: 8px;
+}
+
+.dropdown-content > ul > li a {
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */
