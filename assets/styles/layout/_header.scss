@@ -38,6 +38,14 @@ $header-height: 6rem;
     }
   }
 
+  &__menu-btn {
+    display: none;
+
+    @include responsive(tab-port) {
+      display: block;
+    }
+  }
+
   &__settings-btn {
     padding-bottom: calc($header-height/6);
     justify-content: space-between;

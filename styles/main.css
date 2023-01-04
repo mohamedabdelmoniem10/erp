@@ -1098,6 +1098,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: block;
   opacity: 1;
 }
+.header__menu-btn {
+  display: none;
+}
+@media only screen and (max-width: 56.25em) {
+  .header__menu-btn {
+    display: block;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .header__menu-btn {
+    display: block;
+  }
+}
 .header__settings-btn {
   padding-bottom: 1rem;
   justify-content: space-between;
@@ -1491,14 +1504,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   .sidebar {
     position: absolute;
     transition: all 0.4s ease-in-out;
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 }
 @media only screen and (max-width: tab-port) {
   .sidebar {
     position: absolute;
     transition: all 0.4s ease-in-out;
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
 }
 .sidebar.show-menu {

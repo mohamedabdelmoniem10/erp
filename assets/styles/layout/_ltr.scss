@@ -23,6 +23,10 @@ main {
 
 .sidebar {
   float: left;
+
+  @include responsive(tab-port) {
+    transform: translateX(-100%);
+  }
 }
 
 .main-menu>li>.sub-menu {
