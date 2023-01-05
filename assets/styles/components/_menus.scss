@@ -1,4 +1,4 @@
-$submenu-width: 22rem;
+$submenu-width:12rem;
 
 .menu {
   list-style: none;
@@ -17,7 +17,7 @@ $submenu-width: 22rem;
 
 
 
-  padding: 1rem;
+  padding: .8rem;
 
   &::after {
     content: "";
@@ -37,14 +37,14 @@ $submenu-width: 22rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 1.4rem;
-    padding: 1.5rem .5rem;
-    margin: 1.5rem 0;
+    font-size: .8rem;
+    padding: 1rem 0.3rem;
+    margin: 0.5rem 0;
     border-radius: 5px;
     text-decoration: none;
 
     i {
-      font-size: 2rem;
+      font-size: 1.3rem;
     }
 
     .label {
@@ -100,16 +100,18 @@ $submenu-width: 22rem;
 
 
 .sub-menu {
-
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    font-size: 1.4rem;
-    padding: 1rem 2rem;
-    margin: .3rem .1rem;
+    font-size: .8rem;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem 0.1rem;
     text-decoration: none;
 
 
@@ -136,9 +138,9 @@ $submenu-width: 22rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 
     &,
     &:hover {

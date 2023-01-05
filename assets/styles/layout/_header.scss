@@ -1,4 +1,4 @@
-$header-height: 6rem;
+$header-height: 3.5rem;
 
 .header {
   height: $header-height;
@@ -25,6 +25,10 @@ $header-height: 6rem;
     cursor: pointer;
     padding: 0 $header-height * .3;
     padding-top: calc($header-height/2) - 1;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     &.active {
       i {
@@ -60,7 +64,8 @@ $header-height: 6rem;
 
 
     >ul {
-
+      padding: 0;
+      margin: 0;
       display: flex;
       margin-left: 4rem;
       height: 100%;
@@ -231,7 +236,7 @@ $header-height: 6rem;
   &-tabs {
     &__container {
       width: 50%;
-      max-width: 55rem;
+      max-width: 35rem;
       @include flexcenter;
       align-items: flex-end;
 
@@ -243,13 +248,16 @@ $header-height: 6rem;
 
       &>div {
         width: 100%;
-        @include flexcenter;
+        display: flex;
+        justify-content: flex-start;
         align-items: flex-end;
 
         height: 100%;
       }
 
       ul {
+        list-style: none;
+        padding: 0;
         margin: 0;
         overflow: hidden;
         overflow-x: auto;
@@ -257,7 +265,7 @@ $header-height: 6rem;
         align-items: flex-end;
 
         &::-webkit-scrollbar {
-          height: 0;
+          height: 0 !important;
         }
 
         li {
@@ -269,10 +277,15 @@ $header-height: 6rem;
     &__navigation-btn {
       @include flexcenter;
       height: 100%;
-      width: 5rem;
+      height: $header-height;
+      width: 2.5rem;
       background-color: rgba($color-primary, .1);
       color: $color-primary;
-      font-size: 1.7rem;
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -281,9 +294,9 @@ $header-height: 6rem;
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 15rem;
-    font-size: 1.4rem;
-    padding: .9rem 1.5rem;
+    width: 10rem;
+    font-size: .8rem;
+    padding: .4rem 1rem;
     // padding-bottom: 1.8rem;
     padding-left: 1rem;
     opacity: .7;
@@ -299,7 +312,7 @@ $header-height: 6rem;
     &-label {}
 
     &-close {
-      font-size: 2rem;
+      font-size: 1.2rem;
     }
 
     &.active {
@@ -331,6 +344,10 @@ $header-height: 6rem;
   opacity: 0;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+
+  &>ul {
+    padding: 0;
+  }
 
   &>ul>li {
     position: relative;
@@ -368,8 +385,9 @@ $header-height: 6rem;
       list-style: none;
       padding: 0;
       top: 0;
-      left: 100%;
-      max-width: 120px;
+      right: 100%;
+      max-width: 12rem;
+      min-width: 9rem;
       display: none;
       background-color: #f9f9f9;
 

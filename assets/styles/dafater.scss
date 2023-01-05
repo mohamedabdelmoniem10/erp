@@ -13,16 +13,16 @@
 @import "./components/header-search"; // this
 @import "./components/helper"; // this
 
-@import "./layout/grid";
+// @import "./layout/grid";
 @import "./layout/header"; // this
 @import "./layout/sidebar"; // this
 @import "./layout/layouts";
 
-@import "./base/base";
-@import "./base/resets";
-@import "./base/typography";
+// @import "./base/base";
+// @import "./base/resets";
+// @import "./base/typography";
 @import "./base/utilities";
-@import "./base/animation";
+// @import "./base/animation";
 
 
-// @import "./layout/ltr"; //this
+@import "./layout/ltr";
