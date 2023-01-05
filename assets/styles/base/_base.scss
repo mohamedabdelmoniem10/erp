@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include responsive(big-desktop) {
+    // font-size: 100%;
+    font-size: 62.5%;
+  }
+
+  @include responsive(desktop) {
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    // font-size: 49%;
+  }
+
+  // @include responsive(small-screen) {
+  //   // width < 1350?
+  //   font-size: 48%; //1 rem = 9px, 9/16 = 50%
+  // }
+
+  @include responsive(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include responsive(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  // please un comment this after enhance your responsive 
+
+  // @include responsive(big-desktop) {
+  //   font-size: 75%; //1rem = 12, 12/16
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: $body-bg;
+}
+
+
+// global styles
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::placeholder {
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 4px rgb(0, 0, 0, .2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6d4d4;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}

@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERB Next</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- ./bootstrap -->
+
+    <!-- icons -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./assets/fonts/all.min.css" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/main.min.css" />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <a href="/" class="logo">
+        <img src="./assets/media/dafater-fav.svg" alt="" />
+      </a>
+      <ul class="menu main-menu">
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-chart-line"></i>
+            <i class="fal fa-chart-line"></i>
+            <span class="label">المؤشرات</span>
+          </a>
+
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المؤشرات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item active">العملاء</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-sack-dollar"></i>
+            <i class="fal fa-sack-dollar"></i>
+            <span class="label">المبيعات</span>
+          </a>
+
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المبيعات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="menu__item sub-menu__item sub-menu__adding-item"
+              >
+                العملاء
+                <i class="fal fa-plus-circle"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+                <i class="fal fa-chevron-down"></i>
+              </a>
+
+              <!-- sub menu of sub menu -->
+              <ul class="menu sub-menu">
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 1</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 2</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 3</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد4</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                تهيئة المبيعات
+                <i class="fal fa-chevron-down"></i>
+              </a>
+              <!-- sub menu of sub menu -->
+              <ul class="menu sub-menu">
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 1</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 2</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد 3</a>
+                </li>
+                <li>
+                  <a href="#" class="menu__item sub-menu__item">عنصر جديد4</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-boxes-alt"></i>
+            <i class="fal fa-boxes-alt"></i>
+            <span class="label">المخزون</span>
+          </a>
+
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المخزون</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fal fa-shopping-cart"></i>
+            <span class="label">المشتريات</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">المشتريات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <i class="fal fa-file-invoice-dollar"></i>
+            <span class="label">الحسابات</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">الحسابات</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-users"></i>
+            <i class="fal fa-users"></i>
+            <span class="label">م البشرية</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">م البشرية</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-file-chart-line"></i>
+            <i class="fal fa-file-chart-line"></i>
+            <span class="label">التقارير</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">التقارير</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="menu__item main-menu__item">
+            <i class="fas fa-university"></i>
+            <i class="fal fa-university"></i>
+            <span class="label">البنوك/صناديق</span>
+          </a>
+          <!-- sub menu -->
+          <ul class="menu sub-menu">
+            <li>
+              <a href="#" class="menu__item sub-menu__parent-item">
+                <span class="label">البنوك/صناديق</span>
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">الفواتير</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">سندات القبض</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">العملاء</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">مبادرات البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">فرص البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">التسعيرات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">اوامر البيع</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">حملات البيع</a>
+            </li>
+            <li><a href="#" class="menu__item sub-menu__item">المرتجعات</a></li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">قوائم الاسعار</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item">تحليلات المبيعات</a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub">
+                جهاز المبيعات
+              </a>
+            </li>
+            <li>
+              <a href="#" class="menu__item sub-menu__item has-sub"
+                >تهيئة المبيعات</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <!-- main -->
+    <main>
+      <!-- header -->
+      <header class="header">
+        <div class="header-tabs__container">
+          <div>
+            <a href="#" class="header-tabs__navigation-btn right">
+              <i class="fal fa-chevron-right"></i>
+            </a>
+            <ul>
+              <li>
+                <div class="header__tab">
+                  <span class="header__tab-label">tab 1</span>
+                  <a href="#" class="header__tab-close">
+                    <i class="fal fa-times"></i>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="header__tab active">
+                  <span class="header__tab-label">tab 2</span
+                  ><a href="#" class="header__tab-close"
+                    ><i class="fal fa-times"></i
+                  ></a>
+                </div>
+              </li>
+              <li>
+                <div class="header__tab">
+                  <span class="header__tab-label">tab 3</span
+                  ><a href="#" class="header__tab-close"
+                    ><i class="fal fa-times"></i
+                  ></a>
+                </div>
+              </li>
+              <li>
+                <div class="header__tab">
+                  <span class="header__tab-label">tab 4</span
+                  ><a href="#" class="header__tab-close"
+                    ><i class="fal fa-times"></i
+                  ></a>
+                </div>
+              </li>
+              <li>
+                <div class="header__tab">
+                  <span class="header__tab-label">tab 5</span>
+                  <a href="#" class="header__tab-close">
+                    <i class="fal fa-times"></i>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="header__tab">
+                  <span class="header__tab-label">tab 6</span>
+                  <a href="#" class="header__tab-close">
+                    <i class="fal fa-times"></i>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="header__tab">
+                  <span class="header__tab-label">tab 7</span>
+                  <a href="#" class="header__tab-close">
+                    <i class="fal fa-times"></i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="header-tabs__navigation-btn left">
+              <i class="fal fa-chevron-left"></i>
+            </a>
+          </div>
+        </div>
+        <div class="header-btns__container">
+          <ul>
+            <li>
+              <a href="#" class="header__btn header__menu-btn">
+                <i class="fal fa-bars"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__search-btn">
+                <i class="fal fa-search"></i>
+              </a>
+              <div class="header__search">
+                <div class="search__field">
+                  <a class="search__btn" href="#">
+                    <i class="fal fa-search"></i></a
+                  ><a class="search-close__btn" href="#"
+                    ><i class="fal fa-times"></i
+                  ></a>
+                  <input
+                    class="search__input"
+                    type="search"
+                    placeholder="بحث"
+                  />
+                </div>
+                <div class="search__results-container">
+                  <div class="search__calc">
+                    <div class="search__calc-icon">
+                      <i class="fal fa-calculator-alt"></i>
+                    </div>
+                    <div class="search__calc-result"></div>
+                  </div>
+                  <div class="search__results">
+                    <div class="search__result">
+                      <div class="search__result-title">عملية</div>
+                      <div class="search__result-content"></div>
+                      <div class="search__result-item">فاتورة مبيعات جديدة</div>
+                      <div class="search__result-item">فاتورة نقطة بيع</div>
+                      <div class="search__result-item">فاتورة نقطة بيع</div>
+                    </div>
+                    <div class="search__result">
+                      <div class="search__result-title">وثائق وتقارير</div>
+                      <div class="search__result-content"></div>
+                      <div class="search__result-item">تقارير فاتورة شراء</div>
+                      <div class="search__result-item">نموذج فاتورة شراء</div>
+                      <div class="search__result-item">فاتورة رقم 5000</div>
+                    </div>
+                    <div class="search__result">
+                      <div class="search__result-title">معلومات</div>
+                      <div class="search__result-content"></div>
+                      <div class="search__result-item">
+                        كيفية إنشاء فاتورة مبيعات جديدة
+                      </div>
+                    </div>
+                    <div class="search__result">
+                      <div class="search__result-title">وثائق وتقارير</div>
+                      <div class="search__result-content"></div>
+                      <div class="search__result-item">تقارير فاتورة شراء</div>
+                      <div class="search__result-item">نموذج فاتورة شراء</div>
+                      <div class="search__result-item">فاتورة رقم 5000</div>
+                    </div>
+                  </div>
+                  <div class="search__footer">
+                    <div class="search__hint">
+                      <div class="search__hint-icon">
+                        <i class="fal fa-calculator-alt"></i>
+                      </div>
+                      <div class="search__hint-content">
+                        بإمكانك استخدام البحث كـ آلة حاسبة
+                      </div>
+                    </div>
+                    <div class="search__hint">
+                      <div class="search__hint-icon">
+                        <i class="fal fa-angle-up"></i
+                        ><i class="fal fa-angle-down"></i>
+                      </div>
+                      <div class="search__hint-content">للتنقل</div>
+                    </div>
+                    <div class="search__hint">
+                      <div class="search__hint-icon">ENTER</div>
+                      <div class="search__hint-content">للإختيار</div>
+                    </div>
+                    <div class="search__hint">
+                      <div class="search__hint-icon">Esc</div>
+                      <div class="search__hint-content">للإغلاق</div>
+                    </div>
+                    <a class="search__hint search__help-link" href="#">
+                      مساعدة البحث</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__history-btn">
+                <i class="fal fa-history"></i>
+              </a>
+              <div class="dropdown-content left">
+                <ul>
+                  <li><a href="#"> الإشعار رقم 1</a></li>
+                  <li><a href="#"> الإشعار رقم 2</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__settings-btn">
+                <i class="fal fa-cog"></i>
+                <i class="fal fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <ul>
+                  <li class="brdr-bottom">
+                    <a id="toolbar-setup" href="#Setup">
+                      <i class="fal fa-cogs text-blue_pacific"></i>
+                      إعداد
+                    </a>
+                  </li>
+                  <li>
+                    <a id="toolbar-lang" class="lang">
+                      <i class="fal fa-language text-blue_pacific"></i>
+                      لغة
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          id="toolbar-lang-en"
+                          class="toggle-language"
+                          data-language="English"
+                        >
+                          <img
+                            src="https://engineering-omar.dafater.biz/lib/images/custom/dafater/uk.png"
+                          /><span>English</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          id="toolbar-lang-ar"
+                          class="toggle-language"
+                          data-language="العربية"
+                          ><img
+                            src="https://engineering-omar.dafater.biz/lib/images/custom/dafater/saudi.png"
+                          /><span>عربي </span></a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      id="toolbar-about"
+                      onclick="return wn.ui.toolbar.show_about();"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                      حول</a
+                    >
+                  </li>
+                  <li id="clear-cach-icon">
+                    <a class="header-btn btn" id="toolbar-clear-cache" href="#">
+                      <i class="far fa-sync"></i>مسح الذاكرة المؤقتة وتحديث
+                    </a>
+                  </li>
+                  <li id="switch-ui-icon">
+                    <a class="header-btn btn" id="toolbar-swith-ui" href="#"
+                      ><i class="fal fa-long-arrow-left"></i>عودة للنسخة
+                      الكلاسيكية</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__help-btn">
+                <i class="fal fa-question-circle"></i>
+              </a>
+              <div class="dropdown-content">
+                <div class="helper-tools-container">
+                  <div class="d-flex d-flex-columns helper-tools-content">
+                    <div class="search">
+                      <h3 class="title">المساعدة</h3>
+                      <div class="input-group search-box">
+                        <input
+                          class="form-control"
+                          placeholder="Search for..."
+                          type="text"
+                        /><span class="input-group-btn">
+                          <button class="btn">
+                            <i class="fas fa-search"></i></button
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="suggestions">
+                      <h4 class="title">مقترحات</h4>
+                      <section class="item">
+                        <div class="title">
+                          <span class="icon">
+                            <i class="fas fa-wrench"></i
+                          ></span>
+                          <h5>دليل الإجراءات</h5>
+                        </div>
+                        <ul class="d-content">
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#procedure-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة
+                              </p></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#procedure-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة هنا يتم كتابة وصف بسيط للمضمون الخاص
+                                بتلك المساعدة
+                              </p></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#procedure-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          class="show-all btn btn-outline-primary"
+                          target="procedures-sub-menu"
+                          >عرض دليل الإجراءات كامل</a
+                        >
+                      </section>
+                      <section class="item">
+                        <div class="title">
+                          <span class="icon">
+                            <i class="fas fa-circle"></i
+                          ></span>
+                          <h5>دليل الإستخدام</h5>
+                        </div>
+                        <ul class="d-content">
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#usage-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة
+                              </p></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#usage-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة هنا يتم كتابة وصف بسيط للمضمون الخاص
+                                بتلك المساعدة
+                              </p></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#usage-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          class="show-all btn btn-outline-primary"
+                          target="usage-sub-menu"
+                          >عرض دليل الإستخدامات كامل</a
+                        >
+                      </section>
+                      <section class="item">
+                        <div class="title">
+                          <span class="icon">
+                            <i class="fas fa-circle"></i
+                          ></span>
+                          <h5>الأسئلة الشائعة</h5>
+                        </div>
+                        <ul class="d-content">
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#questions-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة
+                              </p></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#questions-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة هنا يتم كتابة وصف بسيط للمضمون الخاص
+                                بتلك المساعدة
+                              </p></a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href=""
+                              data-toggle="modal"
+                              data-target="#questions-manual-modal"
+                            >
+                              <div class="title">كيف فتح حساب جديد ؟</div>
+                              <p class="breif">
+                                هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                المساعدة
+                              </p></a
+                            >
+                          </li>
+                        </ul>
+                        <a
+                          class="show-all btn btn-outline-primary"
+                          target="questions-sub-menu"
+                          >عرض جميع الأسئلة الشائعة</a
+                        >
+                      </section>
+                    </div>
+                    <ul class="shortcuts">
+                      <li>
+                        <a href="">
+                          <span class="icon">
+                            <i class="fas fa-layer-group"></i></span
+                          ><span>مكتبة المعرفة</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="">
+                          <span class="icon"> <i class="fas fa-tv"></i></span
+                          ><span>مركز الفيديوهات</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="">
+                          <span class="icon"> <i class="fas fa-map"></i></span
+                          ><span>المدونة</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="">
+                          <span class="icon">
+                            <i class="fas fa-comment"></i></span
+                          ><span>المنتدى</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="">
+                          <span class="icon">
+                            <i class="fas fa-user-friends"></i></span
+                          ><span>صوت العميل</span></a
+                        >
+                      </li>
+                      <li>
+                        <a href="">
+                          <span class="icon"> <i class="fas fa-link"></i></span
+                          ><span>الاختصارات</span></a
+                        >
+                      </li>
+                    </ul>
+                    <div class="contact">
+                      <div class="note">
+                        <p>كما يمكنك التواصل معنا من خلال الدعم المباشر</p>
+                        <span class="icon">
+                          <i class="fas fa-comments"></i
+                        ></span>
+                      </div>
+                      <div class="links">
+                        <div class="actions">
+                          <a class="btn btn-primary" href="">تواصل الان</a
+                          ><a class="btn btn-outline-primary" href=""
+                            >عرض أرشيف التذاكر</a
+                          >
+                        </div>
+                        <div class="times">
+                          <span>من الاحد الى الخميس</span
+                          ><span>من 9 صباحاً الى 4 مساء</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex d-flex-columns helper-tools-content sub-menu"
+                    id="procedures-sub-menu"
+                  >
+                    <div class="go-back">
+                      <a role="button"><span>عوده للمساعده </span></a>
+                    </div>
+                    <div class="search">
+                      <h3 class="title">دليل الإجراءات</h3>
+                      <div class="input-group search-box">
+                        <input
+                          class="form-control"
+                          placeholder="Search for..."
+                          type="text"
+                        /><span class="input-group-btn">
+                          <button class="btn">
+                            <i class="fas fa-search"></i></button
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="guide-panel-parent panel-group" id="procedures">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#procedures"
+                            href="#general-tools"
+                            aria-expanded="false"
+                            >اجراءات عامة</a
+                          >
+                        </div>
+                        <div class="panel-collapse collapse" id="general-tools">
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#procedures"
+                            href="#accounts-procedures"
+                            aria-expanded="false"
+                            >اجراءات الحسابات</a
+                          >
+                        </div>
+                        <div
+                          class="panel-collapse collapse"
+                          id="accounts-procedures"
+                        >
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#procedures"
+                            href="#sales-procedures"
+                            aria-expanded="false"
+                            >اجراءات المبيعات</a
+                          >
+                        </div>
+                        <div
+                          class="panel-collapse collapse"
+                          id="sales-procedures"
+                        >
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#procedures"
+                            href="#procurement-procedures"
+                            aria-expanded="false"
+                            >اجراءات المشتريات</a
+                          >
+                        </div>
+                        <div
+                          class="panel-collapse collapse"
+                          id="procurement-procedures"
+                        >
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#procedures"
+                            href="#stock-procedures"
+                            aria-expanded="false"
+                            >اجراءات المخزون</a
+                          >
+                        </div>
+                        <div
+                          class="panel-collapse collapse"
+                          id="stock-procedures"
+                        >
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#procedure-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex d-flex-columns helper-tools-content sub-menu"
+                    id="usage-sub-menu"
+                  >
+                    <div class="go-back">
+                      <a role="button"><span>عوده للمساعده </span></a>
+                    </div>
+                    <div class="search">
+                      <h3 class="title">دليل الإستخدام</h3>
+                      <div class="input-group search-box">
+                        <input
+                          class="form-control"
+                          placeholder="Search for..."
+                          type="text"
+                        /><span class="input-group-btn">
+                          <button class="btn">
+                            <i class="fas fa-search"></i></button
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="guide-panel-parent panel-group" id="usage">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#usage"
+                            href="#usage-ex-1"
+                            aria-expanded="false"
+                            >دليل الإستخدام 1</a
+                          >
+                        </div>
+                        <div class="panel-collapse collapse" id="usage-ex-1">
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#usage-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#usage-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#usage-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#usage"
+                            href="#usage-ex-2"
+                            aria-expanded="false"
+                            >دليل الإستخدام 2</a
+                          >
+                        </div>
+                        <div class="panel-collapse collapse" id="usage-ex-2">
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#usage-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#usage-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#usage-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex d-flex-columns helper-tools-content sub-menu"
+                    id="questions-sub-menu"
+                  >
+                    <div class="go-back">
+                      <a role="button"><span>عوده للمساعده </span></a>
+                    </div>
+                    <div class="search">
+                      <h3 class="title">الأسئلة الشائعة</h3>
+                      <div class="input-group search-box">
+                        <input
+                          class="form-control"
+                          placeholder="Search for..."
+                          type="text"
+                        /><span class="input-group-btn">
+                          <button class="btn">
+                            <i class="fas fa-search"></i></button
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="guide-panel-parent panel-group" id="questions">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#questions"
+                            href="#questions-ex-1"
+                            aria-expanded="false"
+                            >الأسئلة الشائعة 1</a
+                          >
+                        </div>
+                        <div
+                          class="panel-collapse collapse"
+                          id="questions-ex-1"
+                        >
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#questions-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#questions-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#questions-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <a
+                            class="panel-title collapsed collapsed"
+                            role="button"
+                            data-toggle="collapse"
+                            data-parent="#questions"
+                            href="#questions-ex-2"
+                            aria-expanded="false"
+                            >الأسئلة الشائعة 2</a
+                          >
+                        </div>
+                        <div
+                          class="panel-collapse collapse"
+                          id="questions-ex-2"
+                        >
+                          <div class="panel-body">
+                            <ul class="d-content">
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#questions-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#questions-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة هنا يتم كتابة وصف بسيط للمضمون
+                                    الخاص بتلك المساعدة
+                                  </p></a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href=""
+                                  data-toggle="modal"
+                                  data-target="#questions-manual-modal"
+                                >
+                                  <div class="title">كيف فتح حساب جديد ؟</div>
+                                  <p class="breif">
+                                    هنا يتم كتابة وصف بسيط للمضمون الخاص بتلك
+                                    المساعدة
+                                  </p></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__notifications-btn">
+                <i class="fal fa-bell"></i>
+              </a>
+              <div class="dropdown-content notification-container">
+                <div class="mo-notifications">
+                  <div class="mo-notifications-header">
+                    <div class="heading">الإشعارات</div>
+                    <div class="notification-header-btn">
+                      <a class="select-all-read-btn btn" href="#"
+                        >تحديد الكل كمقروء<i class="far fa-check"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="mo-notifications-filter">
+                    <div class="mo-notifications-dropdown-btn">
+                      الكل<i class="far fa-chevron-down"></i>
+                      <div class="mo-notifications-dropdown-content">
+                        <ul>
+                          <li>
+                            <a class="filter-with active" href="#"
+                              ><i class="fal fa-sack-dollar"></i>الكل</a
+                            ><span class="mo-notifications-badge">9</span>
+                          </li>
+                          <li>
+                            <a class="filter-with" href="#">
+                              <i class="fal fa-sack-dollar"></i>دفتر البيع</a
+                            ><span class="mo-notifications-badge">2</span>
+                          </li>
+                          <li>
+                            <a class="filter-with" href="#">
+                              <i class="fal fa-sack-dollar"></i>دفتر الشراء</a
+                            ><span class="mo-notifications-badge">3</span>
+                          </li>
+                          <li>
+                            <a class="filter-with" href="#">
+                              <i class="fal fa-sack-dollar"></i>دفتر المخزون</a
+                            ><span class="mo-notifications-badge">1</span>
+                          </li>
+                          <li>
+                            <a class="filter-with" href="#">
+                              <i class="fal fa-sack-dollar"></i>دفتر الموارد
+                              البشرية</a
+                            ><span class="mo-notifications-badge">2</span>
+                          </li>
+                          <li>
+                            <a class="filter-with" href="#">
+                              <i class="fal fa-sack-dollar"></i>دفتر المشاريع</a
+                            ><span class="mo-notifications-badge">2</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mo-notifications-body">
+                    <a class="mo-notification requests not-seen" href="#">
+                      <div class="mo-notification-icon">
+                        <i class="fal fa-bullhorn"></i>
+                      </div>
+                      <div class="mo-notification-body">
+                        <div class="mo-notification-title">طلب أجازة</div>
+                        <div class="mo-notification-content">
+                          <div class="request-title success">
+                            وافق محمد مجدي
+                          </div>
+                          &nbsp; على الطلب &nbsp;
+                          <div class="request-number dark">رقم 001</div>
+                        </div>
+                        <div class="mo-notification-info">
+                          <div class="mo-notification-source">
+                            <i class="fal fa-sack-dollar"></i>موارد بشرية ,
+                          </div>
+                          <div class="mo-notification-date">
+                            اليوم ‏1:00 ظهرا
+                          </div>
+                        </div>
+                      </div></a
+                    ><a class="mo-notification message not-seen" href="#">
+                      <div class="mo-notification-icon">
+                        <i class="fal fa-bullhorn"></i>
+                      </div>
+                      <div class="mo-notification-body">
+                        <div class="mo-notification-title">رسالة جديد</div>
+                        <div class="mo-notification-content">
+                          <div class="sender">محمد عبدالغني :</div>
+                          <div class="message">
+                            يجب الانتهاء من مراجعة الدفتر من قسم الـ
+                          </div>
+                        </div>
+                        <div class="mo-notification-info">
+                          <div class="mo-notification-source">
+                            <i class="fas fa-comment-alt-lines"></i>الرسائل
+                          </div>
+                          <div class="mo-notification-date">
+                            اليوم ‏1:00 ظهرا
+                          </div>
+                        </div>
+                      </div></a
+                    ><a class="mo-notification task" href="#">
+                      <div class="mo-notification-icon">
+                        <i class="fal fa-bullhorn"></i>
+                      </div>
+                      <div class="mo-notification-body">
+                        <div class="mo-notification-title">مهمة جديدة</div>
+                        <div class="mo-notification-content">
+                          <div class="priority-badge bg-warning">متوسط</div>
+                          <div class="task-from">أسندها إليك محمد عبدالغني</div>
+                        </div>
+                        <div class="mo-notification-info">
+                          <div class="mo-notification-source">
+                            <i class="fal fa-sack-dollar"></i>فاتورة مبيعات
+                          </div>
+                          <div class="mo-notification-date">
+                            اليوم ‏1:00 ظهرا
+                          </div>
+                        </div>
+                      </div></a
+                    ><a class="mo-notification calendar-notification" href="#">
+                      <div class="mo-notification-icon">
+                        <i class="fal fa-bullhorn"></i>
+                      </div>
+                      <div class="mo-notification-body">
+                        <div class="mo-notification-title">
+                          اجتماع فريق خدمة العملاء
+                        </div>
+                        <div class="mo-notification-content">
+                          اجتماع خاص بموديول 5 اليوم 4:00 مساءا
+                        </div>
+                        <div class="mo-notification-info">
+                          <div class="mo-notification-source">
+                            <i class="fas fa-calendar-alt"></i>التقويم
+                          </div>
+                          <div class="mo-notification-date">
+                            اليوم ‏1:00 ظهرا
+                          </div>
+                        </div>
+                      </div></a
+                    ><a class="mo-notification invoice" href="#">
+                      <div class="mo-notification-icon invoice-icon success">
+                        <i class="fal fa-list-ul"></i>
+                      </div>
+                      <div class="mo-notification-body">
+                        <div class="mo-notification-title">فاتورة شراء</div>
+                        <div class="mo-notification-content invoice-details">
+                          <div class="invoice-status success">
+                            [ تحت الاعتماد ]
+                          </div>
+                          <div class="invoice-number">[ فاتورة رقم ]</div>
+                          <div class="invoice-client">
+                            [ اسم الشركة او العميل ]
+                          </div>
+                        </div>
+                        <div class="mo-notification-info">
+                          <div class="mo-notification-source">
+                            <i class="fal fa-sack-dollar"></i>دفتر الشراء
+                          </div>
+                          <div class="mo-notification-date">
+                            اليوم ‏1:00 ظهرا
+                          </div>
+                        </div>
+                      </div></a
+                    ><a class="mo-notification out-stock-warning" href="#">
+                      <div class="mo-notification-icon">
+                        <i class="fal fa-siren-on"></i>
+                      </div>
+                      <div class="mo-notification-body">
+                        <div class="mo-notification-title">نقص صنف</div>
+                        <div class="mo-notification-content">
+                          <div class="item-name">[اسم الصنف]</div>
+                          <span>في</span>
+                          <div class="stock-name">[اسم المستودع]</div>
+                          <div class="item-qty">[الكمية أقل من ...]</div>
+                        </div>
+                        <div class="mo-notification-info">
+                          <div class="mo-notification-source">
+                            <i class="fal fa-sack-dollar"></i>دفتر مخزون
+                          </div>
+                          <div class="mo-notification-date">
+                            اليوم ‏1:00 ظهرا
+                          </div>
+                        </div>
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="header__btn header__profile-btn">
+                <div class="profile__avatar">
+                  <img src="./assets/media/avatar.png" alt="profile avatar" />
+                </div>
+                <div class="profile__info">
+                  <span>محمد عبدالمنعم</span>
+                  <!-- NAME -->
+                  <span>EM0091</span>
+                  <!-- ID -->
+                </div>
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="far fa-sign-out-alt"></i>
+                        تسجيل الخروج
+                    </a>
+                  </li>
+              </div>
+            </li>
+          </ul>
+          <!-- search -->
+          <!-- history -->
+          <!-- settings -->
+          <!-- help -->
+          <!-- notifications -->
+          <!-- user button card -->
+        </div>
+      </header>
+      <div class="content-container">
+        <!-- list indicators -->
+        <div class="list-indicators__row">
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">مسودة</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>74</span>
+              <span></span>
+            </div>
+          </div>
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">اجمالي الفواتير</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>2.88K</span>
+              <span>3 فاتورة</span>
+            </div>
+          </div>
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">مبالغ محصلة</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>2.88K</span>
+              <span>3فاتورة</span>
+            </div>
+          </div>
+          <div class="list-indicators__item">
+            <div class="list-indicators__item-icon">
+              <i class="fal fa-file-edit"></i>
+            </div>
+            <h3 class="list-indicators__item-label">المبلغ المعلق</h3>
+            <div class="list-indicators__item-divider"></div>
+            <div class="list-indicators__item-indicator">
+              <span>2.88K</span>
+              <span>3 فاتورة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
+    <!-- bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ./bootstrap -->
+    <script src="main.js"></script>
+  </body>
+</html>

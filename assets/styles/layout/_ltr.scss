@@ -1,0 +1,92 @@
+body {
+  direction: ltr;
+  text-align: left;
+}
+
+main {
+  padding-right: 0;
+  padding-left: 7rem;
+
+  @include responsive(tab-port) {
+    padding-left: 0;
+  }
+
+  .show-menu {
+    padding-left: 7rem;
+  }
+
+  &.shrinked {
+    padding-right: 0;
+    padding-left: 19rem;
+  }
+}
+
+.sidebar {
+  float: left;
+
+  @include responsive(tab-port) {
+    transform: translateX(-100%);
+  }
+}
+
+.main-menu>li>.sub-menu {
+  transform: translateX(-$submenu-width);
+  left: auto;
+  right: 0;
+}
+
+.main-menu__item.active+.sub-menu {
+  transform: translateX($submenu-width);
+}
+
+.sub-menu__item.active::after,
+.sub-menu__item:hover::after {
+  left: auto;
+  right: 0;
+}
+
+.header-tabs__container>div {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.list-indicators__item-indicator {
+  margin-right: 0;
+  margin-left: 1.3rem;
+}
+
+.dropdown-content>ul>li {
+  & ul {
+    left: 100%;
+    right: auto;
+  }
+
+  & a i {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+}
+
+.dropdown-content {
+  left: auto;
+  right: .4rem;
+}
+
+.notification-container::after {
+  left: auto;
+  right: 8px;
+}
+
+.dropdown-content>ul>li a {
+  text-align: left;
+}
+
+.header__search {
+  right: 50%;
+  transform: translateX(-35%);
+
+  &::after {
+    left: 75%;
+  }
+}

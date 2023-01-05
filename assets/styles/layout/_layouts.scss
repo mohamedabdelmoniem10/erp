@@ -1,0 +1,22 @@
+main {
+  padding-right: 7rem;
+  transition: all .3s ease-in-out;
+
+  @include responsive(tab-port) {
+    padding-right: 0;
+  }
+
+  .content-container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .show-menu {
+    padding-right: 7rem;
+  }
+
+  &.shrinked {
+    padding-right: 19rem;
+    transition: all .3s ease-in-out .1s;
+  }
+}

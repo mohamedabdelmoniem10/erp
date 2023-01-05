@@ -1,0 +1,64 @@
+.shrinked .list-indicators__row {}
+
+.list-indicators {
+  &__row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.2rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(13, 10, 44, 0.08);
+
+    &-icon {
+      width: 3rem;
+      min-width: 3rem;
+      height: 3rem;
+      font-size: 1.3rem;
+      @include flexcenter;
+      border-radius: 50%;
+      background-color: rgba($color-primary, .1);
+      color: $color-primary;
+    }
+
+    &-label {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0 1rem;
+      min-width: 45%;
+    }
+
+    &-divider {
+      height: 3rem;
+      width: .5px;
+      background-color: #6d6d6d;
+      // margin-left: 2rem;
+    }
+
+    &-indicator {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1.3rem;
+      max-width: 24%;
+
+      span {
+        font-size: .8rem;
+
+        &:first-child {
+          color: $color-primary;
+          font-size: 1.5rem;
+          font-weight: 700;
+          white-space: break-spaces;
+        }
+      }
+    }
+  }
+
+
+}
