@@ -1,0 +1,22 @@
+.pos-header__menu-ul {
+  bottom: -4rem;
+  height: 4rem;
+}
+
+.pos-header__menu-ul li a {
+  font-size: .9rem;
+  padding: 0.4rem 1.3rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.pos-header__sub-link {
+
+  &.active,
+  &:hover {
+    border: 1px solid #fff;
+    background-color: transparent;
+  }
+
+}

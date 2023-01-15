@@ -15,9 +15,11 @@ $submenu-width:12rem;
 
 .main-menu {
 
-
-
   padding: .8rem;
+
+  @include responsive(tab-port) {
+    padding: 0.6rem;
+  }
 
   &::after {
     content: "";
@@ -37,14 +39,25 @@ $submenu-width:12rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     font-size: .8rem;
     padding: 1rem 0.3rem;
     margin: 0.5rem 0;
     border-radius: 5px;
     text-decoration: none;
 
+
     i {
       font-size: 1.3rem;
+    }
+
+    @include responsive(tab-port) {
+      font-size: .7rem;
+      padding: .8rem .5rem;
+
+      i {
+        font-size: 1.1rem;
+      }
     }
 
     .label {
@@ -159,12 +172,17 @@ $submenu-width:12rem;
     // background-color: rgba(#6D6D6D, .1);
 
     i {
+      display: none;
       color: $color-primary;
     }
 
     &:hover {
       background-color: rgba(#6D6D6D, .1);
       color: inherit;
+
+      i {
+        display: block;
+      }
 
       &::after {
         content: none;

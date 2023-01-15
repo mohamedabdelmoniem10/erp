@@ -1,9 +1,13 @@
+body {
+  font-family: 'Almarai';
+}
+
 main {
   padding-right: 7rem;
   transition: all .3s ease-in-out;
 
   @include responsive(tab-port) {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 
   .content-container {
@@ -19,4 +23,39 @@ main {
     padding-right: 19rem;
     transition: all .3s ease-in-out .1s;
   }
+
+  // reset some paddings & margins
+  .page-body {
+    padding: 0;
+  }
 }
+
+.show-menu {
+  &+main {
+    padding-right: 7rem;
+    z-index: 0;
+    position: relative;
+
+    @include responsive(tab-port) {
+      padding-right: 0 !important;
+    }
+  }
+
+  &+.shrinked {
+    padding-right: 7rem;
+
+    @include responsive(tab-port) {
+      padding-right: 5rem;
+    }
+  }
+}
+
+// .hide-menu {
+//   &+main {
+//     padding-right: 7rem;
+//   }
+
+//   &+.shrinked {
+//     padding-right: 7rem;
+//   }
+// }

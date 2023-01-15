@@ -8,7 +8,7 @@ main {
   padding-left: 7rem;
 
   @include responsive(tab-port) {
-    padding-left: 0;
+    padding-left: 0 !important;
   }
 
   .show-menu {
@@ -87,6 +87,26 @@ main {
   transform: translateX(-35%);
 
   &::after {
-    left: 75%;
+    left: 80%;
   }
+}
+
+.header__search {
+  left: 50%;
+  transform: translateX(-50%);
+
+  // @include responsive 
+  &::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.header__search .search__result {
+  margin-left: 1.6rem;
+}
+
+.search-close__btn {
+  left: auto !important;
+  right: 3%;
 }
